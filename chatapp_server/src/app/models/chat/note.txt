@@ -1,0 +1,58 @@
+{
+  "userId": "65a7a27c2d8c155033d76cba",
+  "email": "hasan@gmail.com",
+  "name": "Hasan",
+  "iat": 1705497093,
+  "exp": 1705583493
+}
+{
+  "userId": "65a7a28d2d8c155033d76cbd",
+  "email": "tareq@gmail.com",
+  "name": "Tareq",
+  "iat": 1705497019,
+  "exp": 1705583419
+}
+{
+  "userId": "65a7d3fbbf9dca1e5b77b432",
+  "email": "sumaiya@gmail.com",
+  "name": "Sumaiya",
+  "iat": 1705497609,
+  "exp": 1705584009
+}
+members: [req.body.senderId, req.body.reciverId],
+{
+    "senderId":"65a7a27c2d8c155033d76cba", hasan
+    "reciverId":"65a7a28d2d8c155033d76cbd", tareq
+}
+[
+  {
+    "_id": "65a7a40a2d8c155033d76cc7",
+    "members": [
+      "65a7a28d2d8c155033d76cbd", tareq
+      "65a7a27c2d8c155033d76cba" hasan
+    ],
+    "createdAt": "2024-01-17T09:55:22.578Z",
+    "updatedAt": "2024-01-17T09:55:22.578Z",
+    "__v": 0
+  },
+  {
+    "_id": "65a7d2d2bf9dca1e5b77b42e",
+    "members": [
+      "65a7a27c2d8c155033d76cba",  sumaiya
+      "65a7a28d2d8c155033d76cbd" tareq
+    ],
+    "createdAt": "2024-01-17T13:14:58.920Z",
+    "updatedAt": "2024-01-17T13:14:58.920Z",
+    "__v": 0
+  }
+  {
+  "members": [
+    "65a7a28d2d8c155033d76cbd",
+    "65a7d3fbbf9dca1e5b77b432" sumaiya
+  ],
+  "_id": "65a7d46dbf9dca1e5b77b436",
+  "createdAt": "2024-01-17T13:21:49.069Z",
+  "updatedAt": "2024-01-17T13:21:49.069Z",
+  "__v": 0
+}
+]

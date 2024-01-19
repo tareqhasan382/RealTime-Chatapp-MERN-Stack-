@@ -1,0 +1,5 @@
+{
+  "chatId":"65a56fe8bdcad0b18e25211f", 
+  "senderId":"65a3ba48187266d207d4ccdc", 
+  "text":"hello How are you"
+}

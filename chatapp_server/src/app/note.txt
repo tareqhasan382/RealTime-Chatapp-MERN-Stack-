@@ -1,0 +1,29 @@
+   // const wss = new ws.WebSocketServer({ server });
+    // wss.on("connection", (connection, req) => {
+    //   //wss.clients
+
+    //   const cookies = req.headers.cookie;
+    //   if (cookies) {
+    //     const tokenValue = cookies.split("=")[1];
+    //     if (tokenValue) {
+    //       const { userId, email, name } = jwt.verify(tokenValue, config.secret);
+    //       connection.userId = userId;
+    //       connection.userName = name;
+    //       connection.email = email;
+    //     }
+    //   }
+
+    //   [...wss.clients].forEach((client) => {
+    //     client.send(
+    //       JSON.stringify({
+    //         online: [...wss.clients].map((x) => ({
+    //           userId: x.userId,
+    //           name: x.userName,
+    //           email: x.email,
+    //         })),
+    //       })
+    //     );
+    //   });
+    // });
+
+    //================================ WebSocket server end==============================================

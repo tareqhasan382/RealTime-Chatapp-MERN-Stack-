@@ -1,0 +1,58 @@
+const dotenv = require("dotenv");
+const app = require("./app");
+const mongoose = require("mongoose");
+const config = require("./config/config");
+// const ws = require("ws");
+const io = require("socket.io");
+const jwt = require("jsonwebtoken");
+dotenv.config();
+
+//=======uncaught Exception handle=======
+process.on("uncaughtException", (error) => {
+  console.log(error);
+  process.exit(1);
+});
+
+let server;
+async function main() {
+  try {
+    await mongoose.connect(config.database_url, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+
+    console.log(`Database is connected successfully`);
+
+    server = app.listen(process.env.PORT, () => {
+      console.log(`Application app listening on port ${process.env.PORT}`);
+    });
+    //================================ WebSocket server start==============================================
+    const io = server;
+    io.on("connection", (socket) => {
+      console.log("A user connected");
+    });
+    //================================ WebSocket server end==============================================
+  } catch (error) {
+    console.log("Failed to connect to the Database", error);
+  }
+
+  process.on("unhandledRejection", (error) => {
+    if (server) {
+      server.close(() => {
+        console.log(error);
+        process.exit(1);
+      });
+    } else {
+      process.exit(1);
+    }
+  });
+}
+
+main();
+
+process.on("SIGTERM", () => {
+  console.log("SIGTERM is received");
+  if (server) {
+    server.close();
+  }
+});

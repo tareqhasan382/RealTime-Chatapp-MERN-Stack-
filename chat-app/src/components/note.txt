@@ -1,0 +1,18 @@
+  <div>
+        {data?.map((message,index)=>(
+            <div key={index}>
+                <div
+                  >
+                    {message.senderId !== user?.userId && <div className=" message"><span>{message.text}</span>
+                    <span>{format(message.createdAt)}</span></div> }
+                  </div>
+                  {message.senderId === user?.userId && <div className=" text-right own bg-blue-500 w-[180px] px-3 items-end "><span>{message.text}</span>
+                    <span>{format(message.createdAt)}</span></div> }
+                  
+            </div>
+        ))}
+      </div>
+
+
+      {message.senderId !== user?.userId && <p className="bg-blue-500 text-white p-2 rounded-md mt-2">{message?.text} Hi </p>}
+                    {message.senderId === user?.userId && <p className="bg-blue-500 text-white p-2 rounded-md mt-2">{message?.text} Hlw </p>}
